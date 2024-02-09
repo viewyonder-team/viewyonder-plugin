@@ -27,3 +27,14 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Viewyonder Plugin. If not, see {URI to Plugin License}.
 */
+
+// Check if get_plugins() function exists. This is required on the front end of the
+// site, since it is in a file that is normally only loaded in the admin.
+if ( ! function_exists( 'get_plugins' ) ) {
+	require_once ABSPATH . 'wp-admin/includes/plugin.php';
+}
+
+$all_plugins = get_plugins();
+
+// Save the data to the error log so you can see what the array format is like.
+error_log( print_r( $all_plugins, true ) );
