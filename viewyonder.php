@@ -1,3 +1,4 @@
+<?php
 /*
  * Plugin Name:       Viewyonder Plugin
  * Plugin URI:        https://viewyonder.com/plugins/my-plugin/
